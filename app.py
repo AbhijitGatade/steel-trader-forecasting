@@ -1,8 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 import warnings
 from sklearn.linear_model import LinearRegression
 from datetime import date, datetime, timedelta
@@ -96,11 +96,10 @@ if st.button("Forecast"):
     y = merged_df[["weight"]]
 
 
-    fig, ax = plt.subplots(figsize=(12, 6))
-    sns.lineplot(data=merged_df, x='srno', y='weight', marker='o', ax=ax)
-    ax.set_title("Month on Month Product Sale From " + str(startmonth) + "/" + str(startyear) + " To " + str(endmonth) + "/" + str(endyear))
-    st.pyplot(fig)
-
+    # fig, ax = plt.subplots(figsize=(12, 6))
+    # sns.lineplot(data=merged_df, x='srno', y='weight', marker='o', ax=ax)
+    # ax.set_title("Month on Month Product Sale From " + str(startmonth) + "/" + str(startyear) + " To " + str(endmonth) + "/" + str(endyear))
+    # st.pyplot(fig)
     
     last_year = merged_df.iloc[-1]['year']
     last_month = merged_df.iloc[-1]['month']
